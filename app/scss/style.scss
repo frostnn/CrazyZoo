@@ -1,0 +1,248 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+
+
+.park {
+  background-color: green;
+  height: 100vh;
+}
+.rabbit {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(230, 18, 124);
+  border-radius: 50%;
+  margin-left: 13px;
+  margin-top: 59px;
+  position: relative;
+  animation: jump 8s infinite;
+}
+
+
+.ear-left  {
+  position: absolute;
+  left: 5px;
+  top: -50px;
+  border-radius: 50%;
+  width: 20px;
+  height: 60px;
+  background-color: rgb(230, 18, 124);
+}
+
+
+.ear-right {
+  position: absolute;
+  right: 7px;
+  top: -50px;
+  border-radius: 50%;
+  width: 20px;
+  height: 60px;
+  background-color: rgb(230, 18, 124);
+}
+
+.ear-left::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  border-radius: 50%;
+  width: 10px;
+  height: 35px;
+  background-color: whitesmoke;
+}
+
+
+.ear-right::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  border-radius: 50%;
+  width: 10px;
+  height: 35px;
+  background-color: whitesmoke;
+}
+
+
+
+.eyes-right,
+.eyes-left{
+  width: 9px;
+  height: 14px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  left: 19px;
+  top: 19px;
+ 
+}
+
+.eyes-right::after,
+.eyes-left::after {
+  content: '';
+  width: 5px;
+  height: 7px;
+  background-color: rgb(3, 3, 3);
+  border-radius: 50%;
+  position: absolute;
+  left: 1px;
+  top: 6px;
+  animation: olo 2s infinite;
+}
+
+
+.eyes-right::after {
+  left: 4px;
+    top: 2px;
+}
+.eyes-right {
+  left: 33px;
+  top: 19px;
+}
+
+
+
+@keyframes olo {
+
+0% {
+left: 2px;
+
+top: 7px;
+}
+10% {
+  left: 3px;
+  
+  top: 9px;
+  }
+  
+20% {
+  left: 4px;
+      
+  top: 10px;
+    }
+30% {
+  left: 5px;
+      
+  top: 11px;
+      }
+40% {
+  left: 4px;
+        
+  top: 10px;
+        }
+50% {
+  left: 3px;
+      
+  top: 9px;
+    }
+60% {
+  left: -2px;
+      
+  top: 8px;
+      }
+70% {
+  left: 3px;
+        
+  top: 9px;
+        }
+80% {
+  left: 4px;
+      
+  top: 9px;
+    }
+90% {
+  left: 2px;
+      
+  top: 8px;
+      }
+100% {
+  left: 1px;
+        
+  top: 7px;
+        }
+}
+
+
+@keyframes jump {
+
+  0% {
+ transform: translateX(50px);
+  }
+  10% {
+    transform: translateY(50px);
+    }
+    
+  20% {
+    transform: translateY(-50px);
+   
+      }
+ /*  30% {
+    transform: translateX(50px);
+        } */
+  40% {
+    transform: translateY(50px);
+          }
+  50% {
+    transform: translateY(-50px);
+      }
+/*   60% {
+    transform: translateX(50px);
+  } */
+        
+  70% {
+    transform: translateY(-50px);
+          }
+  80% {
+    transform: translateY(50px);
+      }
+/*   90% {
+    transform: translateX(50px);
+        } */
+  100% {
+    transform: translateY(-50px);
+          }
+  }
+.smile {
+  width: 30px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  border-bottom-right-radius: 330%;
+  position: absolute;
+  left: 15px;
+  top: 42px;
+  border-bottom-left-radius: 346%;
+}
+.smile::after {
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 7px;
+  background-color: rgb(218, 214, 214);
+  top: 0;
+  right: 15px;
+  border-right: 1px solid silver;
+  border-left: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-bottom-right-radius: 35%;
+  border-bottom-left-radius: 35%;
+}
+.smile::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background-color: rgb(218, 214, 214);
+  top: 0;
+  left: 15px;
+  border-bottom-right-radius: 35%;
+  border-bottom-left-radius: 35%;
+  border-right: 1px solid silver;
+  border-left: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+
+@import "media";
+
+
